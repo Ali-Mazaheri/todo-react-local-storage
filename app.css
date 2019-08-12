@@ -1,0 +1,69 @@
+.application{
+ /* border: 1px solid red; */
+ width: 263px;
+ margin: auto;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  margin: auto;
+  width: 100px;
+  margin: 0 0 0 75px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/* Styles go here */
+
+span.button {
+  text-shadow:1px 1px 1px gray;
+  cursor: pointer;
+  padding: 0 0 0 10px;
+}
+
+span.button:hover {
+  text-shadow:1px 0px 1px gray;
+}
+
+.toDoMain input{
+  width:200px;
+}
+
+.toDoItem input{
+  width:180px;
+  border: none;
+  background-color: #fafafa;
+}
+
+.toDoMain{
+  border:solid 1px lightgray;
+  display:inline-block;
+  padding: 12px;
+}
+
+
+input[type="checkbox"]{
+  display:none;
+}
+
+input[type="checkbox"] + label:before{
+  padding: 0 10px 0 0;
+  display:inline-block;
+  cursor: pointer;
+  width:15px;
+  text-shadow:1px 1px 1px gray;
+}
+
+input[type="checkbox"]:not(:checked) + label:before{
+  content: "\2610";
+}
+
+input[type="checkbox"]:checked + label:before{
+  content: '\2611';
+}
+
+input[type="checkbox"]:checked ~ input{
+  text-decoration: line-through;
+  color: gray;
+}
